@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <div class="alan-btn"></div>
+  <script type="text/javascript"
+   src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+  <script>
+    var alanBtnInstance = alanBtn({
+      key: "ffb83f49e745b38402f5857c1a00ae1c2e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: function (commandData) {
+        if (commandData.command === "go:back") {
+          //call client code that will react to the received command
+        }
+      },
+      rootEl: document.getElementById("alan-btn"),
+    });
+  </script>
+  <meta charset="UTF-8">
+  <title>TEAM 81</title>
+  
+  <link rel = "icon" href = 
+"MAYA.jpg" 
+        type = "image/x-icon">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto&subset=latin,devanagari'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  
+<style>
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+} 
+
+main {
+  flex: 1 0 auto;
+}
+
+h1.title,
+.footer-copyright a {
+  font-family: 'Architects Daughter', cursive;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* start welcome animation */
+
+body.welcome {
+  background:#8B57a2 url("https://mayacare.org/images/banner-1.jpg") no-repeat left;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+}
+
+.welcome .splash {
+  height: 0px;
+  padding: 0px;
+  border: 130em solid #a7c7d7;
+  position: fixed;
+  left: 50%;
+  top: 100%;
+  display: block;
+  box-sizing: initial;
+  overflow: hidden;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+}
+.svg1 .text1{
+  font-family: 'Comic Sans MS';
+  letter-spacing: 10%;
+  stroke: white;
+  font-size: 500%;
+  font-weight: 70%;
+  stroke-width: 3;
+  animation: textAnimate 5s infinite alternate;
+  transform: translate(25%, 25%)
+}
+@keyframes textAnimatee {
+  0% {
+    opacity:0;
+    font-size: 50%;
+  }
+  100%{
+   opacity :1;
+   font-size: 70%;
+  }
+}
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+    fill: WHITE;
+
+  }
+  
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: hsla(189, 68%, 75%,0%)
+  }
+  
+}  
+
+.welcome #welcome {
+background: #039be5 ;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+}
+   
+/* moveIn */
+.welcome header,
+.welcome a.btn {
+  opacity: 0;
+  animation: moveIn 2s 3.1s ease forwards;
+}
+
+@keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 56px;
+    height: 56px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes puff {
+  0% {
+    top: 100%;
+    height: 0px;
+    padding: 0px;
+  }
+  100% {
+    top: 50%;
+    height: 100%;
+    padding: 0px 100%;
+  }
+}
+
+@keyframes borderRadius {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    background: #039be5;
+    top: 100%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 50%;
+    background: #039be5;
+  }
+}
+
+@keyframes materia {
+  0% {
+    background: #039be5;
+  }
+  50% {
+    background: #039be5;
+    top: 26px;
+  }
+  100% {
+    background: #7ac4ea;
+    width: 100%;
+    height: 64px;
+    border-radius: 0px;
+    top: 26px;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <body class="welcome">
+  <span id="splash-overlay" class="splash"></span>
+  <span id="welcome" class="z-depth-4"></span>
+ 
+  <header class="navbar-fixed"> 
+    <nav class="row deep-purple darken-3">
+      <div class="col s12">
+        <ul class="right">
+            <li class="right">
+                {% if user.is_authenticated %}
+                <div class="nav-item dropdown">
+                    <ul>
+                    <li><a class="dropdown-item" href="{% url 'logout' %}">Log Out</a></li>
+                  </ul>
+                </div>
+                {% else %}
+                <a href="{% url 'login' %}" class="btn btn-outline-primary" type="submit">Login</a>
+                <a href="{% url 'register' %}" class="btn btn-outline-primary" type="submit">Join Us</a>
+                {% endif %} 
+            </li>
+          <li class="right">
+            <a href="https://www.facebook.com/ServiceMayaCARE/" target="_blank" class="fa fa-facebook-square fa-2x waves-effect waves-light"><span class="icon-text"></span></a>
+          </li>
+          <li class="right">
+            <a href="https://www.youtube.com/channel/UClKD4ds4lOZ8U4S0eahQe9Q/featured" target="_blank" class="fa fa-twitter-square fa-2x waves-effect waves-light"><span class="icon-text"></span></a>
+          </li>
+          <li class="right">
+            <a href="https://www.youtube.com/channel/UClKD4ds4lOZ8U4S0eahQe9Q/featured" target="_blank" class="fa fa-youtube-square fa-2x waves-effect waves-light"><span class="icon-text"></span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <main class="valign-wrapper">
+    <span class="container grey-text text-lighten-1 ">
+
+      <p class="flow-text" style="color:white;">Welcome!</p>
+      <svg class="svg1" width="100%" height="100%">
+        <text class="text1" x="20%" y="50%"  text-anchor="middle"  >
+        Maya Care 
+        </text>
+        </svg>
+
+      <blockquote class="flow-text" style="color: white;">conceived as a dream to assist senior citizens in activities that would offer them convenience, independence and happiness while continuing to live in their own homes</blockquote>
+
+      <div class="center-align">
+        
+        <!-- Dropdown Trigger -->
+        <a class="btn dropdown-button" href="{% url 'lms' %}">LMS</a>
+        <a class="btn dropdown-button" href="{% url 'donations' %}">Donate To Us</a>
+        <a class="btn dropdown-button" data-activates="study">Get started<i class="material-icons right">expand_more</i></a>
+
+        <!-- Dropdown Structure -->
+        <ul id="study" class="dropdown-content">
+          <li><a href="{% url 'timesheet' %}">TimeSheet</a></li>
+          <li><a href="{% url 'dashboard' %}">Bindu Dashboard</a></li>
+          <li><a href="{% url 'services' %}">Use our Services</a></li>
+        </ul>
+      </div>
+
+    </span>
+  </main>
+  
+</body>
+  
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js'></script>
+  
+  
+
+</body>
+
+</html>
+ 
